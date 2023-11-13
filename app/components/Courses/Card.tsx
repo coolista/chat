@@ -36,7 +36,7 @@ const NamesList = () => {
     <img src="../../../assets/card/experts.png" className="card-img-top w-full h-56 object-cover object-center" alt="..." />
     <div className="card-body p-4">
         <h5 className="card-title text-lg font-bold mb-3">Card title</h5>
-        <p className="card-text text-gray-700 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p className="card-text text-gray-700 mb-4">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
         <div className="star-rating flex mb-4">
         <div className="rating">
             <span className="star text-yellow-500">&#9734;</span>
