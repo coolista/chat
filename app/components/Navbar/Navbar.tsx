@@ -7,7 +7,7 @@ import Drawerdata from "./Drawerdata";
 import Signdialog from "./Signdialog";
 import Registerdialog from "./Registerdialog";
 import Contactus from "./Contactus";
-
+import {BsLightbulb} from 'react-icons/bs';
 
 interface NavigationItem {
     name: string;
@@ -41,15 +41,13 @@ const Navbar = () => {
                             {/* LOGO */}
 
                             <div className="flex flex-shrink-0 items-center">
-                                <img
-                                    className="block h-30px w-30px lg:hidden"
-                                    src={'/assets/logo/Logo.svg'}
-                                    alt="Courses-Logo"
+                                <BsLightbulb
+                                    className="block h-30px w-30px lg:hidden text-white"
+                                    size={24}
                                 />
-                                <img
-                                    className="hidden h-48px w-48px lg:block"
-                                    src={'/assets/logo/Logo.svg'}
-                                    alt="Courses-Logo"
+                                <BsLightbulb
+                                    className="hidden h-48px w-48px lg:block text-white"
+                                    size={30}
                                 />
                             </div>
 
@@ -63,7 +61,7 @@ const Navbar = () => {
                                             href={item.href}
                                             className={classNames(
                                                 item.current ? ' text-white' : 'hover:text-white text-white',
-                                                'px-3 py-4 text-15px font-medium space-links'
+                                                'px-1 py-4 text-15px font-medium space-links'
                                             )}
                                             aria-current={item.href ? 'page' : undefined}
                                         >
