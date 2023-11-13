@@ -75,26 +75,28 @@ export default class MultipleItems extends Component {
 
         return (
 
-            <div className='text-center bg-lightpink'>
+            <div className='bg-lightpink'>
             <div className="mx-auto max-w-2xl py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 {/* Textarea başlığı */}
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4 text-left">
                     Write Your Dream
                 </h2>
-    
+        
                 {/* Textarea */}
                 <textarea
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none"
-                    rows={5}
+                    className="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none"
+                    rows={10}
                     placeholder="Type Your Dream Here..."
                 ></textarea>
-    
+        
                 {/* Gönder butonu */}
-                <button
-                    className="mt-4 px-4 py-2 bg-header bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700"
-                >
-                    Submit Dream
-                </button>
+                <div className="text-right mt-4">
+                    <button
+                        className="px-4 py-2 bg-header bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700"
+                    >
+                        Next:Choose Dream Experts
+                    </button>
+                </div>
             </div>
         </div>
 
