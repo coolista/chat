@@ -1,102 +1,68 @@
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 import Signdialog from "./Signdialog";
 import Registerdialog from "./Registerdialog";
-import Contactus from "./Contactus";
-import {BsLightbulb} from 'react-icons/bs';
-
-interface NavigationItem {
-    name: string;
-    href: string;
-    current: boolean;
-}
-
-const navigation: NavigationItem[] = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'Dream Experts', href: '#courses-section', current: false },
-    { name: 'Mentors', href: '#mentors-section', current: false },
-    { name: 'Testimonial', href: '#testimonial-section', current: false },
-    { name: 'Join', href: '#join-section', current: false },
-]
-
-function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ')
-}
+import { BsLightbulb } from 'react-icons/bs';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState('English');
 
-    const [isOpen, setIsOpen] = React.useState(false);
+    const languages = ['English', 'French', 'Spanish', 'Italian', 'Turkish', 'Swedish', 'Portuguese', 'Japanese', 'Korean'];
 
     return (
         <Disclosure as="nav" className="bg-header navbar">
             <>
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="relative flex h-20 items-center justify-between">
-                        <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
-
-                            {/* LOGO */}
-
-                            <div className="flex flex-shrink-0 items-center">
-                                <BsLightbulb
-                                    className="block h-30px w-30px lg:hidden text-white"
-                                    size={24}
-                                />
-                                <BsLightbulb
-                                    className="hidden h-48px w-48px lg:block text-white"
-                                    size={30}
-                                />
-                            </div>
-
-                            {/* LINKS */}
-
-                            <div className="hidden sm:ml-14 md:block">
-                                <div className="flex space-x-4">
-                                    {navigation.map((item) => (
-                                        <Link
-                                            key={item.name}
-                                            href={item.href}
-                                            className={classNames(
-                                                item.current ? ' text-white' : 'hover:text-white text-white',
-                                                'px-1 py-4 text-15px font-medium space-links'
-                                            )}
-                                            aria-current={item.href ? 'page' : undefined}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    ))}
-                                    <Contactus />
-                                </div>
-                            </div>
+                    <div className="flex h-20 items-center justify-between">
+                        
+                        {/* Logo ve Başlık */}
+                        <div className="flex items-center">
+                            <BsLightbulb
+                                className="block h-30px w-30px lg:hidden text-white"
+                                size={24}
+                            />
+                            <BsLightbulb
+                                className="hidden h-48px w-48px lg:block text-white"
+                                size={30}
+                            />
+                            <h1 className="hidden h-48px w-48px lg:block text-white">Send Your Dream</h1>
                         </div>
+    
+                        {/* Dil Seçimi, Sign In/Register Dialogları ve Sepet İkonu */}
+                        <div className="flex items-center">
+                            {/* Dil Seçimi */}
+                            <select
+                                className="mr-6 bg-transparent text-white border border-white rounded py-2 px-4"
+                                value={selectedLanguage}
+                                onChange={(e) => setSelectedLanguage(e.target.value)}
+                            >
+                                {languages.map((language) => (
+                                    <option key={language} value={language}>{language}</option>
+                                ))}
+                            </select>
 
-                        {/* SIGNIN DIALOG */}
+                            <Signdialog />
+                            <Registerdialog />
 
-                        <Signdialog />
-
-
-                        {/* REGISTER DIALOG */}
-
-                        <Registerdialog />
-
-
-                        {/* DRAWER FOR MOBILE VIEW */}
-
-                        {/* DRAWER ICON */}
-
-                        <div className='block md:hidden'>
+                            {/* Sepet İkonu */}
+                            <AiOutlineShoppingCart className="ml-4 text-white" size={24} />
+                        </div>
+    
+                        {/* Mobil Görünüm için Drawer Menü */}
+                        <div className='block sm:hidden'>
                             <Bars3Icon className="block h-6 w-6" aria-hidden="true" onClick={() => setIsOpen(true)} />
                         </div>
-
-                        {/* DRAWER LINKS DATA */}
-
+    
+                        {/* Drawer */}
                         <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
                             <Drawerdata />
                         </Drawer>
-
+    
                     </div>
                 </div>
             </>
