@@ -16,7 +16,7 @@ const Banner = ()  => {
                         Share. Discover. Understand. <br /> 
                         </h3>
                         <p className="mt-6 text-lg leading-8 text-white">
-                        Let's explore your dreams together! Just share your nighttime tale, pick your favorite interpreter, and we’ll uncover the hidden gems inside.
+                        Let&apos;s explore your dreams together! Just share your nighttime tale, pick your favorite interpreter, and we’ll uncover the hidden gems inside.
                         </p>
                         
                     </div>

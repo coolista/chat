@@ -75,20 +75,28 @@ export default class MultipleItems extends Component {
 
         return (
 
-            <div className='text-center bg-lightpink' >
-                <div className="mx-auto max-w-2xl py-16 px-4s sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="text-lg my-10 text-lightgrey">Trusted by companies of all sizes</h2>
-                    <div>
-                        <Slider {...settings}>
-                            {data.map((item, i) =>
-                                <div key={i}>
-                                    <img src={item.imgSrc} alt={item.imgSrc} />
-                                </div>
-                            )}
-                        </Slider>
-                    </div>
-                </div>
+            <div className='text-center bg-lightpink'>
+            <div className="mx-auto max-w-2xl py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                {/* Textarea başlığı */}
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Write Your Dream
+                </h2>
+    
+                {/* Textarea */}
+                <textarea
+                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none"
+                    rows={5}
+                    placeholder="Type Your Dream Here..."
+                ></textarea>
+    
+                {/* Gönder butonu */}
+                <button
+                    className="mt-4 px-4 py-2 bg-header bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700"
+                >
+                    Submit Dream
+                </button>
             </div>
+        </div>
 
         )
     }
