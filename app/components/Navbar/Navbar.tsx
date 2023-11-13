@@ -37,7 +37,7 @@ const Navbar = () => {
                         <div className="flex items-center">
                             {/* Dil Seçimi */}
                             <select
-                                className="mr-6 bg-transparent text-white border border-white rounded py-2 px-4"
+                                className="mr-6 bg-header text-white border border-white rounded py-2 px-4"
                                 value={selectedLanguage}
                                 onChange={(e) => setSelectedLanguage(e.target.value)}
                             >
