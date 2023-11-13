@@ -8,7 +8,7 @@ const Newsletter = () => {
                     {/* COLUMN-1 */}
                     <div>
                         <h3 className="text-5xl font-bold mb-3"> Join Our Newsletter </h3>
-                        <h4 className="text-lg font-medium mb-7">Subscribe our newsletter for discounts, promo and many more.</h4>
+                        <h4 className="text-xl font-bold  mb-7">Stay updated on the fascinating world of dream interpretation and receive exclusive insights from our Dream Experts</h4>
                         <div className="flex gap-2">
                             <input type="Email address" name="q" className="py-4 text-sm w-full text-black bg-white rounded-md pl-4" placeholder="Enter your email" autoComplete="off" />
                             <button className="bg-purple hover:bg-blue-700 text-white font-medium py-2 px-4 rounded">

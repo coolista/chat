@@ -4,6 +4,7 @@ import { useState } from "react";
 import { GlobeAltIcon, DevicePhoneMobileIcon, CircleStackIcon, CloudIcon } from '@heroicons/react/24/outline';
 import {FiFilter} from 'react-icons/fi';
 import {MdFavoriteBorder} from 'react-icons/md';
+import Card from './Card';
 
 interface Name {
     course: string;
@@ -197,7 +198,7 @@ const NamesList = () => {
     <div id='courses-section' className="mx-auto max-w-2xl py-16 px-4 sm:py-36 sm:px-6 lg:max-w-7xl lg:px-8">
 
         <div className='sm:flex justify-between items-center pb-12'>
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 my-4">Our Experts</h2>
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 my-4">Our Dream Experts</h2>
             <div className="flex space-x-4 items-center">
                
                 <button className="flex items-center bg-transparent   hover:bg-header hover:bg-green-500 text-green-500 font-medium hover:text-white py-3 px-4 border border-green-500 hover:border-transparent rounded">
@@ -224,14 +225,8 @@ const NamesList = () => {
 
         <div>
             <div className="mx-auto max-w-7xl">
-                <div className="grid grid-cols-1 gap-y-10 gap-x-8 py-12">
-                    <div className="col-start-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
-                        {nameElements.length > 0 ? (
-                            nameElements
-                        ) : (
-                            <p>No data to show</p>
-                        )}
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4 py-12">
+                    <Card/>
                 </div>
             </div>
         </div>
