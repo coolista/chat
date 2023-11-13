@@ -46,7 +46,6 @@ const Navbar = () => {
                                 ))}
                             </select>
 
-                            <Signdialog />
                             <Registerdialog />
 
                             {/* Sepet İkonu */}

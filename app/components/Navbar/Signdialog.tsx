@@ -18,8 +18,9 @@ const Signin = () => {
         <>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <div className='hidden md:block'>
-                    <button type="button" className='text-15px text-white font-medium space-links' onClick={openModal}>
-                        Sign In
+                    <span className='text-black text-lg'>Or</span> &nbsp;
+                    <button type="button" className='text-15px text-xl text-button font-medium space-links' onClick={openModal}>
+                         Sign In
                     </button>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
+import Signdialog from './Signdialog'
 
 
 const Register = () => {
@@ -126,8 +127,9 @@ const Register = () => {
                                         </div>
                                     </div>
 
-
+                                    
                                     <div className="mt-4 flex justify-end">
+                                    <Signdialog />
                                         <button
                                             type="button"
                                             className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 "
