@@ -11,7 +11,7 @@ export default function Chat() {
 
   useEffect(() => {
     // Socket.io sunucusuna bağlan
-    socket = io('http://api.sendyourdream.com');
+    socket = io('https://api.sendyourdream.com/');
   
     // Mesajları dinle
     socket.on('chat message', (msg) => {
